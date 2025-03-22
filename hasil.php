@@ -18,9 +18,9 @@
 	<br>
 	<br>
 	<p>Setting yang tersedia:</p>
-	<textarea id="textarea" rows="4" cols="50"></textarea>
-	<label><a href="">Ganti Setting</label>
-	<label>Contoh Paragraf</label><br>
+	<textarea id="textarea" rows="4" cols="50"></textarea><br>
+	<label><a href="setting.php">Ganti Setting</a></label>
+	<p>Contoh Paragraf</p>
 	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
 	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
