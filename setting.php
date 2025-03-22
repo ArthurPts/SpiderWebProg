@@ -6,10 +6,10 @@
     <title>Document</title>
 </head>
 <body>
-<form>
+<form action ="setting.php" method="post">
 <p><label>Text Align:</label>
     <select name="textAlign">
-    <option value="" disabled>>Pilih Text Align</option>
+    <option value="" disabled <?= empty($fontFamily) ? "selected" : "" ?>>-- Pilih Text Align --</option>
         <option value="left">Left</option>
         <option value="right">Right</option>
         <option value="center">Center</option>
@@ -18,7 +18,7 @@
 </p>
 <p><label>Font Family</label>
     <select name="fontFamily">
-    <option value="" disabled>Pilih Font Family</option>
+    <option value="" disabled <?= empty($fontFamily) ? "selected" : "" ?>>-- Pilih Font Family --</option>
         <option value="Arial">Arial</option>
         <option value="Tahoma">Tahoma</option>
         <option value="Calibri">Calibri</option>
@@ -29,12 +29,18 @@
     <input type="color" name="btncolor" >
     </p>
 
-    <input type="submit" name="btnsubmit">
+    <input type="submit" name="btnsimpan" Value="Simpan">
 </form>
 
 <?php
+if(isset($_POST['btnsimpan'])){
+setcookie("textAlign", $_POST['textAlign']);
+setcookie("fontFamily", $_POST['fontFamily']);
+setcookie("color", $_POST['btncolor']);
+header("location: index.php?cookies=1");
 
+}
 ?>
-
+<!-- , time() + 3600, "/" -->
 </body>
 </html>
