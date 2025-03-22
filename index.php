@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+
+
+    </style>
 </head>
 <body>
     <?php
@@ -16,11 +20,11 @@
     
     
     ?>
-    <form action="hasil.php" method="<?php echo ?>">
+    <form action="hasil.php" method="post">
         <input type="submit" name="btnhasil" value="Lihat Hasil">
     </form>
-    <form action="">
-        <a href="setting.php"><button>Lihat Setting</button></a>
+    <form action="setting.php" method="posts">
+        <button name="btnsetting">Lihat Setting</a></button>
     </form>
 
 
