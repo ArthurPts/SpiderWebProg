@@ -6,7 +6,7 @@
     <title>Document</title>
 </head>
 <body>
-<form action ="setting.php" method="post">
+<form action ="index.php" method="$_COOKIE">
 <p><label>Text Align:</label>
     <select name="textAlign">
     <option value="" disabled <?= empty($fontFamily) ? "selected" : "" ?>>-- Pilih Text Align --</option>
@@ -33,13 +33,18 @@
 </form>
 
 <?php
-if(isset($_POST['btnsimpan'])){
-setcookie("textAlign", $_POST['textAlign']);
-setcookie("fontFamily", $_POST['fontFamily']);
-setcookie("color", $_POST['btncolor']);
-header("location: index.php?cookies=1");
 
-}
+setcookie("textAlign", $_COOKIE['textAlign']);
+setcookie("fontFamily", $_COOKIE['fontFamily']);
+setcookie("color", $_COOKIE['btncolor']);
+
+
+// if(isset($_COOKIE['btnsetting'])){
+//     echo $_COOKIE['textAlign'];
+//     echo $_COOKIE['fontFamily'];
+//     echo $_COOKIE['color'];
+
+// }
 ?>
 <!-- , time() + 3600, "/" -->
 </body>

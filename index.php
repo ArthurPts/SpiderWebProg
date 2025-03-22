@@ -11,20 +11,21 @@
 </head>
 <body>
     <?php
-        if(isset($_POST['cookie_yes'])){
-            setcookie("align");
-            setcookie("font");
-            setcookie("color");
+        if(isset($_COOKIE['textAlign']) && isset($_COOKIE['fontFamily']) && isset($_COOKIE['color'])){
+            echo $_COOKIE['textAlign'];
+            echo $_COOKIE['fontFamily'];
+            echo $_COOKIE['color'];
         }
-        else
+        
     
     
     ?>
-    <form action="hasil.php" method="post">
+    <form action="hasil.php" method="$_COOKIE">
         <input type="submit" name="btnhasil" value="Lihat Hasil">
     </form>
-    <form action="setting.php" method="posts">
-        <button name="btnsetting">Lihat Setting</a></button>
+    <form action="setting.php" method="$_COOKIE">
+    <input type="submit" name="btnsetting" value="Lihat Setting">
+        
     </form>
 
 
